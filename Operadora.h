@@ -4,17 +4,38 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#define MAX 100
 using namespace std;
 
 class Cliente{
 private:
+    string pais[MAX];
+    string DataCadastro[MAX];
+public:
+    Cliente(string pais[MAX], string DataCadastro[MAX]);
+};
+
+class PessoaFisica: public Cliente{
+private:
     string nome;
+    string sobrenome;
     string CPF;
     string endereco;
-    vector <int>Celular;
+    vector <Celular>C;
 public:
-    Cliente(string nome, sting CPF, string endereco);
+    PessoaFisica(string nome, sting CPF, string endereco, vector<Celular>C);
     virtual string DadosCliente();
+
+};
+class PessoaJuridica: public Cliente{
+private:
+    string nomeEmpresa;
+    string sigla;
+    string CNPJ;
+    vector <Celular>Cel;
+public:
+    PessoaJuridica(string nomeEmpresa, string sigla, string CNPJ, vector<Celular>Cel);
+
 };
 
 class Celular{
@@ -43,17 +64,18 @@ public:
 class PrePago : public Plano{
 private:
     double credito;
-    Val;
+    Date validade;
 };
 
 class PosPago : public Plano{
 private:
-    Vencimento;
+    Date vencimento;
 
 };
 
 class Ligacao: public Celular{
 private:
+    Date dataHora;
     double duracao;
     double custo;
 };
@@ -68,6 +90,5 @@ private:
     double NumTel;
 public:
 };
-
 
 #endif // OPERADORA_H_

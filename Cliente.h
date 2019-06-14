@@ -7,10 +7,12 @@ using namespace std;
 
 class Cliente{  //A classe cliente definirá os dados dos clientes cadastrados.
 private:
-    string _pais;
+    string _Pais;
     string _DataCadastro;
 public:
-    Cliente(string pais, string DataCadastro);
-    virtual string DadosCliente();
+    Cliente(string Pais, string DataCadastro);
+    string get_Pais();
+    string get_Data();
+    virtual string Dados_Cliente();//Permite que os dados do cliente sejam inseridos para cadastro.
 };
 #endif // _CLIENTE_H

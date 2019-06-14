@@ -28,3 +28,7 @@ string Cliente::DadosCliente(){
         cout<<"Data de Cadastro do Cliente e: "<< _Data[i]<<endl;
         cout<<endl;
 }
+string Cliente::Ver_Dados(){
+    cout<< this->get_Pais();
+    cout <<this -> get_Data();
+}

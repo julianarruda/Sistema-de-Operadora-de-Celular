@@ -17,7 +17,7 @@ public:
     string get_nome();
     string get_CPF();
     string get_endereco();
-    string DadosCliente(); //Insere os dados do cliente de pessoa fisica.
+    string Dados_Cliente(); //Insere os dados do cliente de pessoa fisica.
 };
 
 #endif // PESSOAFISICA_H_

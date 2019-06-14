@@ -1,5 +1,6 @@
-#ifdef PESSOAJURIDICA_H
+#ifndef PESSOAJURIDICA_H
 #define PESSOAJURIDICA_H
+
 
 #include "Cliente.h"
 #include <vector>
@@ -17,5 +18,7 @@ public:
     string get_sigla();
     string get_CNPJ();
     PessoaJuridica(string nomeEmpresa, string sigla, string CNPJ);
-    string DadosCliente();
+    string Dados_Cliente();
 };
+
+#endif // PESSOAJURIDICA_H

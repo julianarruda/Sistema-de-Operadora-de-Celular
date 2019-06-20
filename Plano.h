@@ -26,24 +26,23 @@ protected:
 class PrePago:public Plano{
 public:
     double _credito;
-    string _validade;
+    Date _validade;
     PrePago();
-    PrePago(double validade, string validade);
+    PrePago(double credito, Date validade);
     ~PrePago();
     void add_credito();
     double get_credito();
-    string get_validade();
+    Date get_validade();
 
 };
 
 class PosPago:public Plano{
 public:
-    string _validade;
+    Date _vencimento;
     PosPago();
-    PosPago(string validade);
+    PosPago(Date vencimento);
     ~PosPago();
-    string get_validade();
-
+    Date get_vencimento();
 };
 
 #endif // _PLANO_H

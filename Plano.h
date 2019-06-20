@@ -12,8 +12,8 @@ class Plano{  //A classe
 protected:
     string _nomePlano;
     double _ValorMin;
-    double _franquia;
-    double _franquia;
+    double _Velocidade;
+    double _Franquia;
     double _VelocAlem;
     Plano();
     Plano(string NomePlano);

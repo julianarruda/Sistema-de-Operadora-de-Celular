@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Cliente.h"
 #include "Celular.h"
+#include "Date.h"
 
 using namespace std;
 
@@ -32,7 +33,7 @@ public:
     ~PrePago();
     void add_credito();
     double get_credito();
-    Date get_validade();
+    void get_validade();
 
 };
 
@@ -42,7 +43,7 @@ public:
     PosPago();
     PosPago(Date vencimento);
     ~PosPago();
-    Date get_vencimento();
+    void get_vencimento();
 };
 
 #endif // _PLANO_H

@@ -1,6 +1,8 @@
 #ifndef LIGACAO_H_
 #define LIGACAO_H_
 #include "Celular.h"
+#include "Date.h"
+
 #include <string>
 #include <iostream>
 #define MAX 1000
@@ -8,9 +10,9 @@ using namespace std;
 
 class Ligacao{
 protected:
-    string _datahora;
+    Date _datahora;
     double _duracao;
-    double _custo = 0.50;
+    const double _custo = 0.50;
 public:
     Ligacao();
     ~Ligacao();

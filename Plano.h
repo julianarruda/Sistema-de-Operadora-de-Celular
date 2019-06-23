@@ -9,41 +9,23 @@
 
 using namespace std;
 
-class Plano{  //A classe
+class Plano{
 protected:
     string _nomePlano;
-    double _ValorMin;
-    double _Velocidade;
-    double _Franquia;
-    double _VelocAlem;
+    double _valorMin;
+    double _velocidade;
+    double _franquia;
+    double _velocAlem;
+public:
     Plano();
-    Plano(string NomePlano);
+    Plano(string nomePlano, double valorMin, double velocidade, double franquia, double velocAlem);
     ~Plano();
-    void set_NomeDoPlano();
+    virtual string set_NomeDoPlano();
     void set_ValoresDoPlano(string _nomePlano);
-
+    string get_Nome();
+    double get_Valor();
+    double get_Velocidade();
+    double get_franquia();
+    double get_Velocalem();
 };
-
-class PrePago:public Plano{
-public:
-    double _credito;
-    Date _validade;
-    PrePago();
-    PrePago(double credito, Date validade);
-    ~PrePago();
-    void add_credito();
-    double get_credito();
-    void get_validade();
-
-};
-
-class PosPago:public Plano{
-public:
-    Date _vencimento;
-    PosPago();
-    PosPago(Date vencimento);
-    ~PosPago();
-    void get_vencimento();
-};
-
 #endif // _PLANO_H
